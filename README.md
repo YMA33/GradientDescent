@@ -1,5 +1,19 @@
 # Gradient Descent on Modern Hardware
-We perform the first comprehensive experimental study of parallel gradient descent algorithms that investigates the combined impact of three axes -- computing architecture (multi-core CPU or GPU), model update strategy (synchronous or asynchronous), and data sparsity (dense or sparse) -- on three measures --- hardware efficiency, statistical efficiency, and overall time to convergence. Our work supports logistic regression, support vector machines and deep neural nets.
+We perform the first comprehensive experimental study of parallel gradient descent algorithms that investigates the combined impact of three axes -- computing architecture (multi-core CPU or GPU), model update strategy (synchronous or asynchronous), and data sparsity (dense or sparse) -- on three measures --- hardware efficiency, statistical efficiency, and overall time to convergence. Our work supports logistic regression (LR), support vector machines (SVM) and deep neural nets (MLP). We draw several interesting findings from our experiments:
+- On synchronous SGD, GPU always outperforms parallel CPU in hardware efficiency and, consequently, in time to
+convergence. For LR and SVM, the difference is minimal for small low-dimensional datasets and increases with
+dimensionality and sparsity—for a maximum speedup of 5.66X. For MLP, the speedup is at least 4X in all the cases.
+However, this speedup is nowhere close to the degree of parallelism gap between CPU and GPU.
+- On asynchronous SGD, CPU is undoubtedly the optimal solution, outperforming GPU in time to convergence even
+when the GPU has a speedup of 10X or more. The main reason is the complex interaction between hardware and
+statistical efficiency under asynchronous parallelism. For MLP, the speedup of parallel CPU over GPU is always 6X
+or larger.
+- While GPU is the optimal architecture for synchronous SGD and CPU is optimal for asynchronous SGD, choosing
+the better of synchronous GPU and asynchronous CPU is task- and dataset-dependent. The choice between these two
+mirrors the comparison between BGD and SGD.
+- Our synchronous SGD implementations provide similar or better speedup than TensorFlow and BIDMach when executed on GPU and parallel CPU. This confirms that parallel CPU should be considered as a competitive alternative for
+training machine learning models with SGD.
+
 
 See our [arXiv](https://arxiv.org/abs/1802.08800) paper and the conference paper accepted by [IPDPS2019](http://www.ipdps.org/) for more details. 
 
