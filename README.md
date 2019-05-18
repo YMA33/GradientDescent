@@ -1,5 +1,5 @@
 # Gradient Descent on Modern Hardware
-We perform the first comprehensive experimental study of parallel gradient descent algorithms that investigates the combined impact of three axes -- computing architecture (multi-core CPU or GPU), model update strategy (synchronous or asynchronous), and data sparsity (dense or sparse) -- on three measures --- hardware efficiency, statistical efficiency, and overall time to convergence. Our work supports logistic regression, support vector machines and deep neural nets (MLP).
+We perform the first comprehensive experimental study of parallel gradient descent algorithms that investigates the combined impact of three axes -- computing architecture (multi-core CPU or GPU), model update strategy (synchronous or asynchronous), and data sparsity (dense or sparse) -- on three measures --- hardware efficiency, statistical efficiency, and overall time to convergence. Our work supports logistic regression, support vector machines and deep neural nets.
 
 See our [arXiv](https://arxiv.org/abs/1802.08800) paper and the conference paper accepted by [IPDPS2019](http://www.ipdps.org/) for more details. 
 
