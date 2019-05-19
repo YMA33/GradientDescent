@@ -28,8 +28,11 @@ Now we are working to design an efficient hybrid gradient descent algorithm.
 - [Download](http://viennacl.sourceforge.net/viennacl-download.html) and [install](http://viennacl.sourceforge.net/doc/manual-installation.html) ViennaCL 1.7.1
 
 ## Build
-
-
+To configure and build, do the following:
+1. `cd ./GradientDescent`
+2. edit 'VCL_HOME' in the Makefile, e.g., /home/user/ViennaCL
+3. `make` 
+ 
 ## Train with our supporting GD algorithms
 The datasets can be downloaded from [link](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/).
 - Example
