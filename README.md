@@ -33,7 +33,7 @@ Now we are working to design an efficient hybrid gradient descent algorithm.
 ## Build
 To configure and build, do the following:
 1. `cd ./GradientDescent`
-2. edit 'VCL_HOME' in the Makefile, e.g., /home/user/ViennaCL
+2. edit 'VCL_PATH' in the Makefile, e.g., /home/user/ViennaCL
 3. `make` 
  
 ## Train with our supporting GD algorithms
