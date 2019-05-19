@@ -5,8 +5,8 @@ CC = nvcc -std=c++11 -Xcompiler -fopenmp
 VCL_PATH =
 
 # the compiler flags that are used when object files are created
-CC_CPUFLAGS += -DVIENNACL_WITH_OPENMP
-CC_GPUFLAGS +=  -DVIENNACL_WITH_CUDA
+CC_CPUFLAGS = -DVIENNACL_WITH_OPENMP
+CC_GPUFLAGS =  -DVIENNACL_WITH_CUDA
 
 LDFLAGS_GPU = -lcublas
 LDFLAGS_CPU = 
