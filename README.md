@@ -38,4 +38,3 @@ To configure and build, do the following:
  
 ## Train with our supporting GD algorithms
 The datasets can be downloaded from [link](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/).
-- Example

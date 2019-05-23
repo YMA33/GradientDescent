@@ -1,5 +1,5 @@
-#ifndef ALGO_MGD_CUBLAS_MLP_H_
-#define ALGO_MGD_CUBLAS_MLP_H_
+#ifndef MODEL_MGD_CUBLAS_MLP_H_
+#define MODEL_MGD_CUBLAS_MLP_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -293,4 +293,4 @@ void MGD_CUBLAS_MLP::train(){
 }
 
 
-#endif /* ALGO_MGD_CUBLAS_MLP_H_ */
+#endif /* MODEL_MGD_CUBLAS_MLP_H_ */

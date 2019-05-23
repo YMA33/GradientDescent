@@ -1,13 +1,5 @@
-//#ifndef VIENNACL_WITH_OPENMP
-//    #define VIENNACL_WITH_OPENMP
-//#endif
-//#ifndef VIENNACL_WITH_CUDA
-//    #define VIENNACL_WITH_CUDA
-//#endif
 #include <omp.h>
-//#include "algo/BGD_VCL.h"
-//#include "algo/MGD_VCL.h"
-#include "algo/BGD_CUBLAS.h"
+#include "algo/BGD_CUBLAS_MLP.h"
 
 int main(int argc, char* argv[]){
 	if(argc != 11){
@@ -35,13 +27,13 @@ int main(int argc, char* argv[]){
     num_units.push_back(4096);
     num_units.push_back(4096);
     num_units.push_back(num_classes);
-    printf("%d->10->5->%d\n", gradient_size, num_classes);
+    printf("%d->4096->4096->%d\n", gradient_size, num_classes);
 ////////////////////////////////////////
     omp_set_num_threads(num_threads);
     Timer timer_tot;
     timer_tot.Restart();
 ////////////////////////////////////////
-    BGD_VCL* nn = new BGD_VCL(num_tuples, gradient_size, num_classes, filename, num_threads,
+    BGD_CUBLAS_MLP* nn = new BGD_CUBLAS_MLP(num_tuples, gradient_size, num_classes, filename, num_threads,
     	batch_size, decay, N_0, iterations, seed, num_layers, num_units);
     nn->load_data();
     nn->init_model(0);

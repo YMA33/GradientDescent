@@ -1,5 +1,5 @@
-#ifndef ALGO_BGD_VCL_MLP_H_
-#define ALGO_BGD_VCL_MLP_H_
+#ifndef MODEL_BGD_VCL_MLP_H_
+#define MODEL_BGD_VCL_MLP_H_
 
 #include <stdio.h>
 #include <math.h>
@@ -223,4 +223,4 @@ void BGD_VCL_MLP::train(){
 	}
 }
 
-#endif /* ALGO_BGD_VCL_MLP_H_ */
+#endif /* MODEL_BGD_VCL_MLP_H_ */

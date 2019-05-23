@@ -1,5 +1,5 @@
-#ifndef ALGO_BGD_CUBLAS_MLP_H_
-#define ALGO_BGD_CUBLAS_MLP_H_
+#ifndef MODEL_BGD_CUBLAS_MLP_H_
+#define MODEL_BGD_CUBLAS_MLP_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -228,4 +228,4 @@ void BGD_CUBLAS_MLP::train(){
 	}
 }
 
-#endif /* ALGO_BGD_CUBLAS_MLP_H_ */
+#endif /* MODEL_BGD_CUBLAS_MLP_H_ */
